@@ -1,0 +1,136 @@
+<!DOCTYPE html> <!-- ye batata hai ki ye html5 ka page hai -->
+<html lang="en"> <!-- page ki language english hai -->
+
+<head> <!-- head me page ki setting hoti hai -->
+    <meta charset="UTF-8"> <!-- hindi / english dono sahi dikhe isliye -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- mobile me bhi sahi dikhe isliye -->
+    <title>TeamMatch - Find Your Teammates</title> <!-- upar tab me naam aayega isliye -->
+    <link rel="stylesheet" href="project.css"> <!-- css file link kiya -->
+</head>
+
+<body> <!-- yaha se dikhne wala part start -->
+
+    <header class="second" style="background-color: #ffffff;"> <!-- upar wali patti -->
+        <div style="font-size: larger; color: rgb(28, 44, 222) ; font: size 300px;;"><h4>TeamMatch</h4></div> <!-- logo -->
+        <nav class="second-links"> <!-- menu -->
+            <a href="#students">Students</a> <!-- students wale section pe le jayega -->
+            <a href="#projects">Projects</a> <!-- projects wale section pe le jayega -->
+            <a href="#add-project">Add Project</a> <!-- form wale section pe le jayega -->
+        </nav>
+    </header>
+
+    <section class="first"> <!-- sabse upar wala section -->
+        <h2 style="color: turquoise;">Find Your Team.<br><span style="color: bisque;">Build Your Future.</span></h1> <!-- badi heading, br se line todi hai -->
+            <p style="color: wheat;">Find students with similar interests, share your project ideas, and build amazing college
+                projects together.</p> <!-- chota paragraph -->
+            <a href="#students"><button>Find Teammates</button></a>
+            <!-- button dabane pe students wale section pe jayega -->
+    </section>
+
+    <section class="students-section" id="students"> <!-- students wala section -->
+        <h2 style="color: darkmagenta;">Search Your Teammate</h2> <!-- heading -->
+        <p>Find students by name or technical skills.</p> <!-- chota text -->
+        <div class="search-box"> <!-- search box -->
+            <input type="text" id="searchInput" placeholder="Searching....">
+            <!-- yaha type karenge, id isliye taaki js me pakad sake -->
+            <button onclick="searchStudents()">Search</button>
+        </div>
+
+        <div class="student-container"> <!-- saare student cards -->
+            <div class="student-data"> <!-- pehla student -->
+                <h3>Priyanshu Kumar </h3> <!-- naam -->
+                <p>B.Tech CSE | 1nd Year</p> <!-- course -->
+                <p>HTML, CSS, JavaScript, Python, C++ </p> <!-- skills -->
+                <p>CGPA: 9.2</p> <!-- cgpa -->
+                <p>Project: College Website</p> <!-- project -->
+                <button onclick="joinTeam('Priyanshu Kumar')">Request to Join</button>
+                <!-- click pe joinTeam chalega -->
+            </div>
+
+            <div class="student-data"> <!-- dusra student -->
+                <h3>Sumit Kumar</h3>
+                <p>B.Tech CSE | 1st Year</p>
+                <p>Python, HTML, Problem Solving</p>
+                <p>CGPA: 8.8</p>
+                <p>Project: Student Management</p>
+                <button onclick="joinTeam('Sumit kumar')">Request to Join</button>
+            </div>
+
+                <div class="student-data"> <!-- teesra student -->
+                    <h3>Manish Kumar</h3>
+                    <p>B.Tech CSE | 2nd Year</p>
+                    <p>JavaScript, React, CSS</p>
+                    <p>CGPA: 8.1</p>
+                    <p>Project: Campus App</p>
+                    <button onclick="joinTeam('Manish Kumar')">Request to Join</button>
+                </div>
+            </div>
+
+            <p class="no-result">No students found. Try another search.</p> <!-- jab kuch na mile to ye dikhega -->
+    </section>
+    <section class="ghost" id="projects"> <!-- project idea wala section -->
+        <h2>Project Idea Board</h2>
+        <p>Explore project ideas and find the teammates they need.</p>
+        <div class="project-container"> <!-- saare project cards -->
+            <div class="project-data"> <!-- pehla project -->
+                <p>Web Development</p> <!-- tag -->
+                <h3>Finder..</h3> <!-- project naam -->
+                <p>A website to help students find lost items on campus.</p> <!-- detail -->
+                <p><b>Required:</b> HTML, CSS, JavaScript</p> <!-- kya chahiye, b se mota kiya -->
+                <button onclick="joinTeam('Finder')">Request to Join</button>
+            </div>
+
+            <div class="project-data"> <!-- dusra project -->
+                <p>AI / Python</p>
+                <h3>WastewiseAi</h3>
+                <p>A project that teaches people how to separate waste.</p>
+                <p><b>Required:</b> Python, Frontend Developer</p>
+                <button onclick="joinTeam('WastewiseAi')">Request to Join</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="third" id="add-project"> <!-- apna project daalne wala section -->
+        <h2>Share Your Project Idea</h2>
+        <p>Add your project and mention the teammates you need.</p>
+        <form id="projectForm"> <!-- form isliye taaki submit kar sake -->
+            <label for="projectName">Project Name:</label> <!-- label, for se input se judta hai -->
+            <input type="text" id="projectName" placeholder="Enter project name" required><br>
+            <!-- naam wala input, required matlab khali nahi chodega -->
+            <label for="projectDescription">Project Description:</label>
+            <textarea id="projectDescription" placeholder="Describe your project" required></textarea><br>
+            <!-- bada text likhne ke liye textarea -->
+            <label for="projectSkills">Required Skills or Roles:</label>
+            <input type="text" id="projectSkills" placeholder="e.g. Python, UI Designer" required>
+            <button type="submit">Upload Project</button> <!-- submit button -->
+            <p id="successMsg"></p> <!-- yaha success wala message aayega -->
+        </form>
+    </section>
+
+
+
+
+    <footer>
+        <h4>Contact Us</h4> <!-- heading -->
+        <p>Email: teammatch@gmail.com</p> <!-- email isliye taaki koi contact kar sake -->
+        <p>College: Lovely Professional University</p> <!-- college ka naam -->
+        <p>Phagwara, Punjab</p> <!-- address -->
+
+
+
+
+        <hr> <!-- line khichne ke liye taaki upar aur neeche alag lage -->
+
+        <p>Developed By: Priyanshu, Sumit, Manish</p> <!-- yaha apne group ke sab ke naam aayenge -->
+        <p>©️ 2026 TeamMatch | CSE326 Student Project</p>
+        <!-- copyright isliye taaki pata chale ye hamara project hai -->
+    </footer>
+    <script src="project.js"></script>
+
+
+
+</body>
+
+</html> 
