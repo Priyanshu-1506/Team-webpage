@@ -1,0 +1,471 @@
+/* second main container */
+.second {
+    display: flex; /* Put logo and menu in one row */
+
+    justify-content: space-between; /* Logo left, menu right */
+
+    align-items: center; /* Vertically align items */
+
+    padding: 20px 50px; /* Space inside navbar */
+
+    background-color: #eef4ff;
+
+}
+
+/* Website logo */
+.logo {
+    font-size: 28px; /* Logo text size */
+ 
+    font-weight: bold; /* Bold logo */
+
+    color: rgb(161, 63, 63); /* White logo text */
+
+    cursor: pointer; /* Hand cursor */
+}
+
+/* Navigation links container */
+.second-links {
+    display: flex; /* Links in horizontal row */
+
+    gap: 35px; /* Space between links */
+}
+
+/* Individual navigation links */
+.second-links a {
+    text-decoration: none; /* Remove underline */
+
+    color: rgb(38, 28, 28); /* White text */
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    transition: 0.3s; /* Smooth hover effect */
+}
+
+/* Mouse hover effect */
+.second-links a:hover {
+    color: #c6c7ca;
+}
+
+
+
+/* first section background */
+.first {
+    min-height: 300px;
+
+    /* Add student discussion background image */
+    background-color: #14294d;
+
+    /* Cover the complete section */
+    background-size: cover;
+
+    /* Keep image in the center */
+    background-position: center;
+
+    /* Prevent image repetition */
+    background-repeat: no-repeat;
+
+    /* Space inside the section */
+    padding: 50px 50px;
+
+    /* Text colour */
+    color: white;
+}
+
+/* Main heading */
+.first h1 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+/* Highlighted heading */
+.first h1 span {
+    color: #2c57a6;
+}
+
+/* Paragraph */
+.first p {
+    font-size: 18px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Button */
+.first button {
+    background-color: #367cff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+   /*STUDENT SECTION
+
+
+/* Main student section */
+.students-section {
+
+    padding: 70px 50px; 
+
+    background-color: #f4f7fc;
+
+    text-align: center;
+}
+
+/* Student section heading */
+.students-section h2 {
+
+    font-size: 32px;
+
+    color: #14294d;
+
+    margin-bottom: 10px;
+}
+
+/* Student section paragraph */
+.students-section > p {
+
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+/* Search box container */
+
+
+.search-box {
+
+    margin: 30px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+/* Search input */
+.search-box input {
+
+    width: 350px;
+
+    padding: 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+/* Input focus effect */
+.search-box input:focus {
+
+    border-color: #367cff;
+}
+
+/* Search button */
+.search-box button {
+
+    padding: 14px 25px;
+
+    background-color: #367cff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+/* Search button hover effect */
+.search-box button:hover {
+
+    background-color: #174fc0;
+}
+
+.student-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+/* Individual student card */
+.student-data {
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+/* Card hover effect */
+.student-data:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Student name */
+.student-data h3 {
+
+    color: #14294d;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+/* Student information */
+.student-data p {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin: 10px 0;
+}
+
+/* Join team button */
+.student-data button {
+
+    background-color: #367cff;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+
+    transition: 0.3s;
+}
+
+/* Join button hover */
+.student-data button:hover {
+
+    background-color: #174fc0;
+}
+
+/* Hide no results message initially */
+.no-results {
+
+    display: none;
+}
+
+/* Responsive design for smaller screens */
+
+
+@media (max-width: 768px) {
+
+    .student-container {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .students-section {
+
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .student-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+
+        flex-direction: column;
+    }
+
+    .search-box input {
+
+        width: 100%;
+    }
+}
+#projectForm {
+    max-width: 500px;
+    margin: 20px auto;       /* Center me lane ke liye */
+    padding: 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: left;
+}
+#successMsg {
+    margin-top: 12px;
+    color: green;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
+/* Main section */
+
+.second {
+    padding: 40px;
+    background-color:honeydew;
+    text-align: center;
+    
+}
+.ghost {
+    padding: 40px;
+    background-color: navajowhite;
+    text-align: center;
+    
+}
+
+/* Heading */
+.second h2 {
+    color: #14294d;
+    font-size: 30px;
+}
+
+/* Description */
+.second > p {
+    color: gray;
+}
+
+/* Project container */
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Project cards */
+.project-data {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Project name */
+.project-data h3 {
+    color: #14294d;
+}
+
+/* Project button */
+.project-data button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Main section */
+.third {
+    padding: 40px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Heading */
+.third h2 {
+    color: #14294d;
+    font-size: 30px;
+}
+
+/* Description */
+.third > p {
+    color: gray;
+}
+
+/* Form */
+.third form {
+    width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Labels */
+.third label {
+    display: block;
+    margin-top: 15px;
+    color: #14294d;
+}
+
+/* Input and textarea */
+.third input,
+.third textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Button */
+.third button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+/* Footer section */
+footer {
+    background-color: #6c788d;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Footer heading */
+footer h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Footer paragraphs */
+footer p {
+    font-size: 14px;
+    margin: 8px;
+}
+
+/* Horizontal line */
+footer hr {
+    border: 1px solid gray;
+    margin: 20px 0;
+}
